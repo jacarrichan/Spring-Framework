@@ -1,5 +1,6 @@
 package com.hmkcode.spring.mvc.controllers;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Iterator;
@@ -58,9 +59,10 @@ public class FileController {
 			 
 			 try {
 				fileMeta.setBytes(mpf.getBytes());
-				
 				// copy file to local disk (make sure the path "e.g. D:/temp/files" exists)
-				FileCopyUtils.copy(mpf.getBytes(), new FileOutputStream("D:/temp/files/"+mpf.getOriginalFilename()));
+				File folder=new File("upload");
+				if(!folder.exists()){folder.mkdirs();}
+				FileCopyUtils.copy(mpf.getBytes(), new FileOutputStream(folder.getAbsolutePath()+"/"+mpf.getOriginalFilename()));
 				
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
