@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.hmkcode</groupId>
-  <artifactId>spring-profile</artifactId>
+  <artifactId>spring-pprofile</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>spring-profile</name>
+  <name>spring-pprofile</name>
   <url>http://maven.apache.org</url>
 
   <properties>
